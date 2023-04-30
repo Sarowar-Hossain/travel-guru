@@ -4,7 +4,7 @@ import Header from '../shared/Header';
 
 const PageLayout = () => {
     return (
-        <div>
+        <div className='container mx-auto'>
             <Header></Header>
             <Outlet></Outlet>
         </div>

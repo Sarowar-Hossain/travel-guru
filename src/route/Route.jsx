@@ -8,6 +8,7 @@ import Contact from '../pages/Contact'
 // import SlidesImage from "../pages/SlidesImage";
 import PageLayout from "../layout/PageLayout";
 import PlaceCard from "../pages/PlaceCard";
+import Hotels from "../pages/Hotels";
 
 
 export const router = createBrowserRouter([
@@ -48,6 +49,10 @@ export const router = createBrowserRouter([
           path: "/news/contact",
           element: <Contact></Contact>,
         },
+        {
+            path: '/news/hotel',
+            element: <Hotels></Hotels>
+        }
       ],
     },
   ]);

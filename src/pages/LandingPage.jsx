@@ -39,7 +39,7 @@ const LandingPage = () => {
                       </p>
                       <Link to={`placeCard/${d.id}`}>
                         {" "}
-                        <button className="px-12 bg-white py-3 rounded-md text-2xl font-bold mt-10">
+                        <button className="bg-orange-500 font-bold text-2xl rounded-md py-4 px-10 text-white mt-10">
                           Booking
                         </button>
                       </Link>
