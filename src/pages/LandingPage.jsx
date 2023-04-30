@@ -2,8 +2,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { Pagination} from "swiper";
-import { useLoaderData } from "react-router-dom";
+import { Pagination } from "swiper";
+import { Link, useLoaderData } from "react-router-dom";
 import Header from "../shared/Header";
 
 const LandingPage = () => {
@@ -25,9 +25,7 @@ const LandingPage = () => {
             <SwiperSlide key={d.id}>
               <div
                 style={{ backgroundImage: `url(${d.image_url})` }}
-                className={
-                  "w-screen h-screen bg-no-repeat bg-cover bg-center"
-                }
+                className={"w-screen h-screen bg-no-repeat bg-cover bg-center"}
               >
                 <div className="container mx-auto">
                   <Header></Header>
@@ -36,10 +34,15 @@ const LandingPage = () => {
                       <h1 className="text-white font-extrabold text-6xl">
                         {d.name}
                       </h1>
-                      <p className="text-white text-xl mt-10">{d.description}</p>
-                      <button className="px-12 bg-white py-3 rounded-md text-2xl font-bold mt-10">
-                        Booking
-                      </button>
+                      <p className="text-white text-xl mt-10">
+                        {d.description}
+                      </p>
+                      <Link to={`placeCard/${d.id}`}>
+                        {" "}
+                        <button className="px-12 bg-white py-3 rounded-md text-2xl font-bold mt-10">
+                          Booking
+                        </button>
+                      </Link>
                     </div>
                     <div className="">
                       <SwiperSlide>

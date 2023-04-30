@@ -7,6 +7,7 @@ import Blog from '../pages/Blog'
 import Contact from '../pages/Contact'
 // import SlidesImage from "../pages/SlidesImage";
 import PageLayout from "../layout/PageLayout";
+import PlaceCard from "../pages/PlaceCard";
 
 
 export const router = createBrowserRouter([
@@ -20,6 +21,11 @@ export const router = createBrowserRouter([
           loader: () =>
             fetch("https://travel-guru-server-sarowar-hossain.vercel.app/data"),
         },
+        {
+            path: 'placeCard/:id',
+            element: <PlaceCard></PlaceCard>,
+            loader: ({params})=>fetch(`https://travel-guru-server-sarowar-hossain.vercel.app/data/${params.id}`)
+        }
       ],
     },
     {
@@ -27,7 +33,7 @@ export const router = createBrowserRouter([
       element: <PageLayout></PageLayout>,
       children: [
         {
-          path: "/news",
+          path: "news",
           element: <News></News>,
         },
         {
