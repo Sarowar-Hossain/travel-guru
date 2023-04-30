@@ -5,7 +5,7 @@ const Header = () => {
         <div className="flex justify-between items-center">
             <Link to='/'><button className="w-32"><img src={logo} alt="" /></button></Link>
             <input type="search" placeholder="Search Your destination" />
-            <Link className="ms-28" to='news'>News</Link>
+            <Link className="ms-28" to='/news'>News</Link>
             <Link to='/news/hotel'>Hotel</Link>
             <Link to='/news/destination'>Destination</Link>
             <Link to='/news/blog'>Blog</Link>

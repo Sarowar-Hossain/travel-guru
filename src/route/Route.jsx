@@ -34,7 +34,7 @@ export const router = createBrowserRouter([
       element: <PageLayout></PageLayout>,
       children: [
         {
-          path: "news",
+          path: "/news",
           element: <News></News>,
         },
         {
